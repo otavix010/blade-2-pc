@@ -1,0 +1,26 @@
+{
+    "nome": "Blade II",
+    "serial": "SLUS-20360",
+    "elf": "SLUS_203.60",
+    "cd_root": "",
+    "exe": "blade-2.exe",
+    "icone_capa": "https://raw.githubusercontent.com/libretro-thumbnails/Sony_-_PlayStation_2/master/Named_Boxarts/Blade%20II%20%28USA%29.png",
+    "iso_sha1": [
+        "b04732f1364d60c870df5f5de8f9a85e5cd16941"
+    ],
+    "elf_sha1": [
+        "615b10b5068e5c18f249dfece9d997104d03d61e"
+    ],
+    "versao": "americana, SLUS-20360",
+    "ambiente": {
+        "PS2X_VU1_NATIVO": "1",
+        "PS2X_GS_THREAD": "1",
+        "PS2X_MTVU": "0",
+        "PS2X_GS_GPU": "0",
+        "PS2X_GS_FILA": "65536",
+        "PS2X_MTVU_FILA": "2048",
+        "PS2X_GS_THREADS": "4",
+        "PS2X_GS_GIRO": "0",
+        "PS2X_RELOGIO_REAL": "1"
+    }
+}

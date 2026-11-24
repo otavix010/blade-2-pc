@@ -1,0 +1,6 @@
+0x00202020  # ponteiro em dados 0x001C23D8 (acha_ponteiros.py)
+0x0048B460  # ponteiro em dados 0x0011D308 (acha_ponteiros.py)
+0x00128F14  # alvo de tabela de salto (jr em 0x00128EF8, acha_tabelas.py)
+0x00128F44  # alvo de tabela de salto (jr em 0x00128EF8, acha_tabelas.py)
+0x00128F68  # alvo de tabela de salto (jr em 0x00128EF8, acha_tabelas.py)
+0x00116EBC  # depois de retorno, sem desvio direto (acha_lacunas.py)
