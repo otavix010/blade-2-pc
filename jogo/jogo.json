@@ -16,7 +16,6 @@
         "PS2X_VU1_NATIVO": "1",
         "PS2X_GS_THREAD": "1",
         "PS2X_MTVU": "0",
-        "PS2X_GS_GPU": "0",
         "PS2X_GS_FILA": "65536",
         "PS2X_MTVU_FILA": "2048",
         "PS2X_GS_THREADS": "4",
