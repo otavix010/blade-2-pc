@@ -98,7 +98,8 @@ FPS de jogo, no motor 0.1.32, em resolução interna 1x (quadros que o jogo de f
 ## Problemas conhecidos
 
 - Primeira versão: só a primeira fase foi testada no port.
-- O GS roda no processador neste jogo (na placa de vídeo o texto do menu de pausa sai em blocos); por isso a resolução interna fica em 1x.
+- O GS roda no processador neste jogo (na placa de vídeo o texto do menu de pausa sai em blocos); por isso a resolução interna fica em 1x. Em cenas pesadas o jogo pode travar por cerca de 1 segundo.
+- Às vezes, por um quadro, o ícone da arma no canto da tela aparece duplicado sobre um retângulo rosado.
 - Sem tela larga (16:9) por enquanto.
 - Esta é a **versão americana (NTSC-U)** apenas (SLUS-20360); outras regiões e versões são recusadas pelo gerador, com o motivo.
 
