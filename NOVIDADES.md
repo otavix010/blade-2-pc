@@ -3,6 +3,14 @@
 O Otavix Launcher mostra este arquivo na página "Novidades" do jogo. Cada atualização tem um título
 "## <data> · <versão>" e o texto em português (### pt), inglês (### en) e espanhol (### es). As mais novas ficam em cima.
 
+## 24/11/2026 · 0.1.1
+### pt
+- A parte gráfica do console passou para a **placa de vídeo**: acabou a travada de cerca de 1 segundo em cenas pesadas e o processador fica mais livre. O texto dos menus continua certo.
+### en
+- The console's graphics now run on the **GPU**: the roughly 1-second freeze in heavy scenes is gone and the CPU has more headroom. Menu text still comes out right.
+### es
+- La parte gráfica de la consola pasó a la **tarjeta de video**: se acabó el congelamiento de cerca de 1 segundo en escenas pesadas y el procesador queda más libre. El texto de los menús sigue saliendo bien.
+
 ## 24/11/2026 · 0.1.0
 ### pt
 - **Primeira versão jogável (beta).** O port gera o jogo a partir da sua ISO americana (SLUS-20360) e roda do começo: logos, menu, briefing e a primeira fase, a 30 FPS, que é o ritmo do jogo no PlayStation 2. Neste jogo a parte gráfica do console roda no processador, para o texto dos menus sair certo; por isso a resolução interna fica em 1x. Teclado e mouse junto com o controle (teclas trocadas na página Controles do launcher).

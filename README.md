@@ -39,13 +39,13 @@ Como o código do jogo não pode ser distribuído, **o seu PC gera e compila a p
 
 ## Estado atual: beta
 
-O jogo roda do começo: logos, menu, briefing da missão e a primeira fase (o galpão do treino), **a 30 FPS, que é o ritmo do jogo no PlayStation 2** (testado num Ryzen 7 9800X3D). Os microprogramas de geometria do VU1 são traduzidos para C++ na sua máquina (a etapa "VU1" do gerador). Neste jogo a parte gráfica do console (GS) roda no **processador**, e não na placa de vídeo: na placa de vídeo o texto do menu de pausa ainda sai em blocos.
+O jogo roda do começo: logos, menu, briefing da missão e a primeira fase (o galpão do treino), **a 30 FPS, que é o ritmo do jogo no PlayStation 2** (testado num Ryzen 7 9800X3D). Os microprogramas de geometria do VU1 são traduzidos para C++ na sua máquina (a etapa "VU1" do gerador). A parte gráfica do console (GS) roda na **placa de vídeo**.
 
 É a primeira versão: o jogo ainda não foi jogado até o fim no port; só a primeira fase foi testada. Relate pelo launcher o que encontrar.
 
 ## Opções
 
-Pelo [Otavix Launcher](https://github.com/otavix010/otavix-launcher/releases/latest), no menu de opções do jogo: janela ou **tela cheia** (no jogo, F11 ou Alt+Enter alternam), tamanho da janela, escalonador (**bilinear, AMD FSR 1 ou NVIDIA Image Scaling**) e a nitidez dele, anti-serrilhamento **FXAA** e predefinições. A **resolução interna** (2x e 4x) precisa do GS na placa de vídeo e por isso ainda não vale neste jogo: ele fica em 1x. A imagem fica em 4:3 (sem tela larga por enquanto). Sem o launcher, as mesmas opções são variáveis de ambiente: `PS2X_TELA_CHEIA=1`, `PS2X_JANELA_TAM=1920x1080`, `PS2X_ESCALA=nenhum|bilinear|fsr|nis`, `PS2X_NITIDEZ_PCT=0..100`, `PS2X_FXAA=1`.
+Pelo [Otavix Launcher](https://github.com/otavix010/otavix-launcher/releases/latest), no menu de opções do jogo: janela ou **tela cheia** (no jogo, F11 ou Alt+Enter alternam), tamanho da janela, escalonador (**bilinear, AMD FSR 1 ou NVIDIA Image Scaling**) e a nitidez dele, anti-serrilhamento **FXAA** e predefinições. A **resolução interna** (2x e 4x) ainda não foi testada neste jogo: por enquanto ele fica em 1x. A imagem fica em 4:3 (sem tela larga por enquanto). Sem o launcher, as mesmas opções são variáveis de ambiente: `PS2X_TELA_CHEIA=1`, `PS2X_JANELA_TAM=1920x1080`, `PS2X_ESCALA=nenhum|bilinear|fsr|nis`, `PS2X_NITIDEZ_PCT=0..100`, `PS2X_FXAA=1`.
 
 ## Teclado e mouse
 
@@ -79,14 +79,13 @@ No *Blade II* o analógico direito é o ataque: com o mouse, o movimento do mous
 
 - **Windows 10/11 64 bits**, com o **Visual Studio 2022 Build Tools** (C++ e CMake; o comando está em [Como gerar](#como-gerar)). O launcher confere isso para você.
 - A **sua ISO** do *Blade II*, na versão americana (NTSC-U) (**SLUS-20360**). O gerador confere o executável e, se não bater, diz se é outra edição (outra região ou versão) ou o mesmo disco modificado.
-- **Processador:** como o GS roda no processador neste jogo, ele pesa mais que nos outros ports. Recomendamos 6 núcleos ou mais.
 - **Memória:** o gerador usa uns 3 GB de RAM por compilação em paralelo e escolhe o paralelismo pela memória livre; com pouca RAM funciona, só demora mais.
 - **Disco:** uns 10 GB livres para os arquivos do disco, o código traduzido e a compilação.
 - **AVX2 não é obrigatório**: o gerador detecta a CPU e usa as bibliotecas AVX2 ou SSE4.
 
 ## Desempenho medido
 
-FPS de jogo, no motor 0.1.32, em resolução interna 1x (quadros que o jogo de fato produz, contados no motor). O jogo é feito para 30 FPS no PlayStation 2. **Só colocamos o que foi medido**; as demais máquinas ainda não foram testadas com este jogo.
+FPS de jogo, no motor 0.1.33, em resolução interna 1x (quadros que o jogo de fato produz, contados no motor). O jogo é feito para 30 FPS no PlayStation 2. **Só colocamos o que foi medido**; as demais máquinas ainda não foram testadas com este jogo.
 
 | Máquina | CPU | GPU | FPS |
 |---|---|---|---|
@@ -98,7 +97,7 @@ FPS de jogo, no motor 0.1.32, em resolução interna 1x (quadros que o jogo de f
 ## Problemas conhecidos
 
 - Primeira versão: só a primeira fase foi testada no port.
-- O GS roda no processador neste jogo (na placa de vídeo o texto do menu de pausa sai em blocos); por isso a resolução interna fica em 1x. Em cenas pesadas o jogo pode travar por cerca de 1 segundo.
+- Às vezes a lista do menu de controles aparece com letras trocadas.
 - Às vezes, por um quadro, o ícone da arma no canto da tela aparece duplicado sobre um retângulo rosado.
 - Sem tela larga (16:9) por enquanto.
 - Esta é a **versão americana (NTSC-U)** apenas (SLUS-20360); outras regiões e versões são recusadas pelo gerador, com o motivo.
@@ -150,7 +149,7 @@ Depois de atualizar o port, `gerar.cmd -RefazerDe 3` baixa o motor novo, retradu
 - **O motor** (tradutor MIPS R5900 → C++ e runtime: GS, VU1, DMA, IOP, áudio SPU2, cartão de memória) é próprio do projeto e vem pronto (bibliotecas compiladas); o seu PC só traduz e compila o código do jogo.
 - **O mapa de funções** (`jogo\ghidra_funcoes.csv`) veio de uma análise com o [Ghidra](https://ghidra-sre.org/) e a extensão ghidra-emotionengine-reloaded: são só endereços e nomes, nada do código do jogo. `jogo\entradas_extra.txt` lista funções chamadas só por ponteiro e alvos de tabelas de salto que a análise não marcou.
 - **A receita do VU1** (`jogo\vu1_receita.json`) diz onde os microprogramas de geometria ficam no executável (offsets e tamanhos, conferidos por SHA-1) e como montar a memória de código do VU1.
-- **O ritmo do jogo** segue o relógio do PC (`PS2X_RELOGIO_REAL=1` no `jogo\jogo.json`). A geometria do VU1 roda na mesma thread do jogo (`PS2X_MTVU=0`) e o GS roda no processador (`PS2X_GS_GPU=0`), com 4 threads de desenho.
+- **O ritmo do jogo** segue o relógio do PC (`PS2X_RELOGIO_REAL=1` no `jogo\jogo.json`). A geometria do VU1 roda na mesma thread do jogo (`PS2X_MTVU=0`) e o GS roda na placa de vídeo.
 
 ## Licença e créditos
 
@@ -162,7 +161,7 @@ Depois de atualizar o port, `gerar.cmd -RefazerDe 3` baixa o motor novo, retradu
 
 ## English summary
 
-A **native PC port** of *Blade II* (PlayStation 2, 2002) made by **static recompilation** with the project's own PS2 engine. **Beta, first release.** It runs from the start (logos, menu, mission briefing and the first level) at **30 FPS, the game's own rate on the PlayStation 2**; only the first level has been tested in the port so far. In this game the console's graphics chip (GS) runs on the **CPU**, not the GPU (on the GPU the pause menu text still comes out as blocks), so the internal resolution stays at 1x and a 6-core CPU or better is recommended. Options in the launcher: window or fullscreen (F11 / Alt+Enter), window size, upscaler (bilinear, AMD FSR 1, NVIDIA Image Scaling) and sharpness, FXAA. The picture stays 4:3. Keyboard and mouse work alongside the controller.
+A **native PC port** of *Blade II* (PlayStation 2, 2002) made by **static recompilation** with the project's own PS2 engine. **Beta, first release.** It runs from the start (logos, menu, mission briefing and the first level) at **30 FPS, the game's own rate on the PlayStation 2**; only the first level has been tested in the port so far. The console's graphics chip (GS) runs on the **GPU**; the internal resolution stays at 1x for now (not tested in this game yet). Options in the launcher: window or fullscreen (F11 / Alt+Enter), window size, upscaler (bilinear, AMD FSR 1, NVIDIA Image Scaling) and sharpness, FXAA. The picture stays 4:3. Keyboard and mouse work alongside the controller.
 
 **Platforms:** Windows 10/11 only for now (Linux is not supported yet; only the *God of War: Ascension* port has a Linux beta). **Easiest: the [Otavix Launcher](https://github.com/otavix010/otavix-launcher/releases/latest).**
 
