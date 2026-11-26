@@ -70,6 +70,8 @@ No *Blade II* o analógico direito é o ataque: com o mouse, o movimento do mous
 
 ## Salvar e carregar o estado (save state)
 
+> **Desligado temporariamente (0.1.4):** carregar um estado na mesma sessão deixava texturas com blocos e lixo colorido. O save state volta numa próxima versão, já corrigido; até lá, use o save do próprio jogo (cartão de memória).
+
 Além do save do próprio jogo (cartão de memória), dá para salvar o momento exato e voltar a ele, como nos emuladores, em 9 espaços:
 
 - **Teclado:** F5 salva, F8 carrega, F6 e F7 trocam o espaço.
@@ -172,7 +174,7 @@ Depois de atualizar o port, `gerar.cmd -RefazerDe 3` baixa o motor novo, retradu
 
 ## English summary
 
-A **native PC port** of *Blade II* (PlayStation 2, 2002) made by **static recompilation** with the project's own PS2 engine. **Beta, first release.** It runs from the start (logos, menu, mission briefing and the first level) at **30 FPS, the game's own rate on the PlayStation 2**; only the first level has been tested in the port so far. The console's graphics chip (GS) runs on the **GPU**; the internal resolution stays at 1x for now (not tested in this game yet). **Save states** in 9 slots: F5 saves, F8 loads, F6/F7 change the slot (controller: hold Select + RB / LB / D-pad left-right); they work only with the same port version. Options in the launcher: window or fullscreen (F11 / Alt+Enter), window size, upscaler (bilinear, AMD FSR 1, NVIDIA Image Scaling) and sharpness, FXAA. The picture stays 4:3. Keyboard and mouse work alongside the controller.
+A **native PC port** of *Blade II* (PlayStation 2, 2002) made by **static recompilation** with the project's own PS2 engine. **Beta, first release.** It runs from the start (logos, menu, mission briefing and the first level) at **30 FPS, the game's own rate on the PlayStation 2**; only the first level has been tested in the port so far. The console's graphics chip (GS) runs on the **GPU**; the internal resolution stays at 1x for now (not tested in this game yet). **Save states** are temporarily turned off (0.1.4): loading a state in the same session left textures with blocks and colored garbage; they come back in a future version, fixed. Options in the launcher: window or fullscreen (F11 / Alt+Enter), window size, upscaler (bilinear, AMD FSR 1, NVIDIA Image Scaling) and sharpness, FXAA. The picture stays 4:3. Keyboard and mouse work alongside the controller.
 
 **Platforms:** Windows 10/11 only for now (Linux is not supported yet; only the *God of War: Ascension* port has a Linux beta). **Easiest: the [Otavix Launcher](https://github.com/otavix010/otavix-launcher/releases/latest).**
 

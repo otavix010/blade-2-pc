@@ -3,6 +3,14 @@
 O Otavix Launcher mostra este arquivo na página "Novidades" do jogo. Cada atualização tem um título
 "## <data> · <versão>" e o texto em português (### pt), inglês (### en) e espanhol (### es). As mais novas ficam em cima.
 
+## 26/11/2026 · 0.1.4
+### pt
+- **Save state desligado temporariamente no Blade II** por um defeito de imagem ao carregar (texturas com blocos e lixo colorido depois de carregar um estado na mesma sessão). Volta numa próxima versão, já corrigido. O save do próprio jogo (cartão de memória) continua normal.
+### en
+- **Save states temporarily turned off in Blade II** because of a picture defect when loading (textures with blocks and colored garbage after loading a state in the same session). They come back in a future version, fixed. The game's own save (memory card) works as before.
+### es
+- **Save state desactivado temporalmente en Blade II** por un defecto de imagen al cargar (texturas con bloques y basura de colores después de cargar un estado en la misma sesión). Vuelve en una próxima versión, ya corregido. El guardado del propio juego (tarjeta de memoria) sigue igual.
+
 ## 25/11/2026 · 0.1.3
 ### pt
 - **Motor PS2 0.1.36:** o primeiro save state da sessão ficou instantâneo (antes levava cerca de 1 s). Estados salvos na versão anterior não carregam nesta; o aviso na tela explica.
