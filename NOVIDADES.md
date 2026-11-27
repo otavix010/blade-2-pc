@@ -7,12 +7,15 @@ O Otavix Launcher mostra este arquivo na página "Novidades" do jogo. Cada atual
 ### pt
 - **Save state de volta no Blade II**, corrigido: F5 salva, F8 carrega, F6/F7 trocam o espaço (no controle, segure Select e aperte RB / LB). O defeito de imagem ao carregar (texturas com blocos e lixo colorido) foi corrigido no motor PS2 0.1.37.
 - **Motor PS2 0.1.37:** o save state ficou mais confiável ao carregar um estado na mesma sessão: agora ele guarda também a textura que estava sendo enviada ao GS e a máscara de profundidade, e as texturas não ficam mais com blocos ou lixo colorido depois da carga. Estados salvos na versão anterior não carregam nesta; o aviso na tela explica.
+- **Também no motor 0.1.37:** carregar um estado podia corromper a memória e fechar o jogo, e um dado lido como comando pelo VIF1 podia deixar texturas presas na fila (o salvamento era recusado e a imagem sujava). As duas coisas foram corrigidas.
 ### en
 - **Save states are back in Blade II**, fixed: F5 saves, F8 loads, F6/F7 change the slot (on the controller, hold Select and press RB / LB). The picture defect when loading (textures with blocks and colored garbage) was fixed in PS2 engine 0.1.37.
 - **PS2 engine 0.1.37:** save states are more reliable when loading a state in the same session: they now also keep the texture that was being sent to the GS and the depth mask, and textures no longer show blocks or colored garbage after loading. States saved in the previous version do not load in this one; the on-screen notice explains it.
+- **Also in engine 0.1.37:** loading a state could corrupt memory and close the game, and data read as a command by the VIF1 could leave textures stuck in the queue (saving was refused and the picture got garbage). Both are fixed.
 ### es
 - **El save state vuelve a Blade II**, corregido: F5 guarda, F8 carga, F6/F7 cambian el espacio (en el mando, mantén Select y pulsa RB / LB). El defecto de imagen al cargar (texturas con bloques y basura de colores) se corrigió en el motor PS2 0.1.37.
 - **Motor PS2 0.1.37:** el save state es más fiable al cargar un estado en la misma sesión: ahora guarda también la textura que se estaba enviando al GS y la máscara de profundidad, y las texturas ya no quedan con bloques ni basura de colores después de cargar. Los estados guardados en la versión anterior no cargan en esta; el aviso en pantalla lo explica.
+- **También en el motor 0.1.37:** cargar un estado podía corromper la memoria y cerrar el juego, y un dato leído como comando por el VIF1 podía dejar texturas atascadas en la cola (el guardado se rechazaba y la imagen se ensuciaba). Ambas cosas se corrigieron.
 
 ## 26/11/2026 · 0.1.4
 ### pt
