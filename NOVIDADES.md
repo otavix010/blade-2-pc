@@ -3,6 +3,17 @@
 O Otavix Launcher mostra este arquivo na página "Novidades" do jogo. Cada atualização tem um título
 "## <data> · <versão>" e o texto em português (### pt), inglês (### en) e espanhol (### es). As mais novas ficam em cima.
 
+## 27/11/2026 · 0.1.5
+### pt
+- **Save state de volta no Blade II**, corrigido: F5 salva, F8 carrega, F6/F7 trocam o espaço (no controle, segure Select e aperte RB / LB). O defeito de imagem ao carregar (texturas com blocos e lixo colorido) foi corrigido no motor PS2 0.1.37.
+- **Motor PS2 0.1.37:** o save state ficou mais confiável ao carregar um estado na mesma sessão: agora ele guarda também a textura que estava sendo enviada ao GS e a máscara de profundidade, e as texturas não ficam mais com blocos ou lixo colorido depois da carga. Estados salvos na versão anterior não carregam nesta; o aviso na tela explica.
+### en
+- **Save states are back in Blade II**, fixed: F5 saves, F8 loads, F6/F7 change the slot (on the controller, hold Select and press RB / LB). The picture defect when loading (textures with blocks and colored garbage) was fixed in PS2 engine 0.1.37.
+- **PS2 engine 0.1.37:** save states are more reliable when loading a state in the same session: they now also keep the texture that was being sent to the GS and the depth mask, and textures no longer show blocks or colored garbage after loading. States saved in the previous version do not load in this one; the on-screen notice explains it.
+### es
+- **El save state vuelve a Blade II**, corregido: F5 guarda, F8 carga, F6/F7 cambian el espacio (en el mando, mantén Select y pulsa RB / LB). El defecto de imagen al cargar (texturas con bloques y basura de colores) se corrigió en el motor PS2 0.1.37.
+- **Motor PS2 0.1.37:** el save state es más fiable al cargar un estado en la misma sesión: ahora guarda también la textura que se estaba enviando al GS y la máscara de profundidad, y las texturas ya no quedan con bloques ni basura de colores después de cargar. Los estados guardados en la versión anterior no cargan en esta; el aviso en pantalla lo explica.
+
 ## 26/11/2026 · 0.1.4
 ### pt
 - **Save state desligado temporariamente no Blade II** por um defeito de imagem ao carregar (texturas com blocos e lixo colorido depois de carregar um estado na mesma sessão). Volta numa próxima versão, já corrigido. O save do próprio jogo (cartão de memória) continua normal.
